@@ -4,6 +4,17 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+function multiplier(x) {
+  return function(y) {
+    return x*y;
+  };
+}
+
+var product10 = multiplier(10);
+var product100 = multiplier(100);
+
+console.log("The product is " + product10(2));
+console.log("The bigger product is " + product100(2));
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
